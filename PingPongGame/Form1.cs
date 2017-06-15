@@ -16,6 +16,7 @@ namespace PingPongGame
         int Score = 0;
         int SpeedLeft = 2;
         int SpeedTop = 2;
+        Boolean OnGoing=true;
 
         public Form1()
         {
@@ -25,10 +26,13 @@ namespace PingPongGame
         private void Form1_Load(object sender, EventArgs e)
         {
             StartGame();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }  
         
         private void StartGame()
         {
+            LvlSetUp();
             Ball.Location=new Point(350, 150);
             t = new System.Windows.Forms.Timer();
             t.Interval = 10;
@@ -43,6 +47,7 @@ namespace PingPongGame
             CollisionWithFloor();
             CollisionWithBat();
             CollisionWithTable();
+            LvlSetter();
         }
 
         private void Form1_KeyDown(object   sender, KeyEventArgs e)
@@ -50,13 +55,13 @@ namespace PingPongGame
             switch (e.KeyCode)
             {
                 case Keys.Left:
-                    if (!Bat.Bounds.IntersectsWith(LeftBorder.Bounds))
+                    if (!Bat.Bounds.IntersectsWith(LeftBorder.Bounds) && OnGoing)
                     {
                         Bat.Left -= 10;
                     }
                     break;
                 case Keys.Right:
-                    if (!Bat.Bounds.IntersectsWith(RightBorder.Bounds))
+                    if (!Bat.Bounds.IntersectsWith(RightBorder.Bounds) && OnGoing)
                     {
                         Bat.Left += 10;
                     }
@@ -68,10 +73,12 @@ namespace PingPongGame
                     if (t.Enabled)
                     {
                         t.Enabled = false;
+                        OnGoing = false;
                     }
                     else
                     {
                         t.Enabled = true;
+                        OnGoing = true;
                     }
                     break;
             }
@@ -82,8 +89,7 @@ namespace PingPongGame
             if (Floor.Bounds.IntersectsWith(Ball.Bounds))
             {
                 t.Stop();
-                //restart
-                DialogResult result = MessageBox.Show("\tGame Over\n\tYour score: "+Score+"\n\tDo you want to starte a new game?", "Ping Ping", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("\tGame Over\n\tYour score: "+Score+"\n\tDo you want to starte a new game?", "Ping Pong", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     StartGame();
@@ -122,5 +128,42 @@ namespace PingPongGame
                 SpeedLeft = -SpeedLeft;
             }
         }
+
+        private void LvlSetUp()
+        {
+            Explosion.Visible = false;
+            lvl1.Visible = true;
+            lvl2.Visible = false;
+            lvl3.Visible = false;
+        }
+
+        private void LvlSetter()
+        {
+            if (Score >= 7 && LvlLabel2.Text=="2")
+            {
+                LvlUp();
+                LvlLabel2.Text = "3";
+                lvl2.Visible = false;
+                lvl3.Visible = true;
+            }
+            else {
+                if (Score == 4 && LvlLabel2.Text=="1")
+                {
+                    LvlUp();
+                    LvlLabel2.Text = "2";
+                    lvl1.Visible = false;
+                    lvl2.Visible = true;
+                }
+            }
+
+        }
+
+        private async void LvlUp()
+        {
+            Explosion.Visible = true;
+            await Task.Delay(500);
+            Explosion.Visible = false;
+        }
+
     }
 }
