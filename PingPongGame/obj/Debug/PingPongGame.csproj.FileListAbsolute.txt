@@ -1,0 +1,9 @@
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\bin\Debug\PingPongGame.exe.config
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\bin\Debug\PingPongGame.exe
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\bin\Debug\PingPongGame.pdb
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\obj\Debug\PingPongGame.csprojResolveAssemblyReference.cache
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\obj\Debug\PingPongGame.Form1.resources
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\obj\Debug\PingPongGame.Properties.Resources.resources
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\obj\Debug\PingPongGame.csproj.GenerateResource.Cache
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\obj\Debug\PingPongGame.exe
+C:\Users\Dodo\Source\Repos\c-sharp-ping-pong-game-szdodo\PingPongGame\obj\Debug\PingPongGame.pdb
