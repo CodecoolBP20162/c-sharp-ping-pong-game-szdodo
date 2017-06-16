@@ -94,7 +94,7 @@
             this.ScoreLabel1.AutoSize = true;
             this.ScoreLabel1.BackColor = System.Drawing.Color.Transparent;
             this.ScoreLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ScoreLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.ScoreLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ScoreLabel1.Location = new System.Drawing.Point(692, 10);
             this.ScoreLabel1.Name = "ScoreLabel1";
             this.ScoreLabel1.Size = new System.Drawing.Size(70, 25);
@@ -107,7 +107,7 @@
             this.ScoreLabel2.BackColor = System.Drawing.Color.Transparent;
             this.ScoreLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ScoreLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ScoreLabel2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.ScoreLabel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ScoreLabel2.Location = new System.Drawing.Point(799, 9);
             this.ScoreLabel2.Name = "ScoreLabel2";
             this.ScoreLabel2.Size = new System.Drawing.Size(23, 25);
@@ -155,7 +155,7 @@
             this.LvlLabel1.AutoSize = true;
             this.LvlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.LvlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LvlLabel1.ForeColor = System.Drawing.SystemColors.Info;
+            this.LvlLabel1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.LvlLabel1.Location = new System.Drawing.Point(10, 10);
             this.LvlLabel1.Name = "LvlLabel1";
             this.LvlLabel1.Size = new System.Drawing.Size(65, 25);
@@ -167,7 +167,7 @@
             this.LvlLabel2.AutoSize = true;
             this.LvlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.LvlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LvlLabel2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.LvlLabel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LvlLabel2.Location = new System.Drawing.Point(96, 10);
             this.LvlLabel2.Name = "LvlLabel2";
             this.LvlLabel2.Size = new System.Drawing.Size(23, 25);
@@ -222,7 +222,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(833, 400);
             this.Controls.Add(this.Explosion);
             this.Controls.Add(this.lvl3);
@@ -239,7 +238,7 @@
             this.Controls.Add(this.Floor);
             this.Controls.Add(this.Bat);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Ping Pong";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.Floor)).EndInit();

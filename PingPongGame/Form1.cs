@@ -33,7 +33,11 @@ namespace PingPongGame
         private void StartGame()
         {
             LvlSetUp();
+            Score = 0;
+            SpeedLeft = 2;
+            SpeedTop = 2;
             Ball.Location=new Point(350, 150);
+            Bat.Location = new Point(276, 375);
             t = new System.Windows.Forms.Timer();
             t.Interval = 10;
             t.Tick += new EventHandler(t_Tick);
@@ -131,6 +135,8 @@ namespace PingPongGame
 
         private void LvlSetUp()
         {
+            LvlLabel2.Text = "1";
+            ScoreLabel2.Text = "0";
             Explosion.Visible = false;
             lvl1.Visible = true;
             lvl2.Visible = false;
